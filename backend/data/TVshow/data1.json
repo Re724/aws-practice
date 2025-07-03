@@ -1,0 +1,256 @@
+[
+  {
+    "word": "I'm not playing games.",
+    "answer": "お遊びじゃないんだ",
+    "sentence": "I'm not playing games.",
+    "sentence_jp": "お遊びじゃないんだ"
+  },
+  {
+    "word": "Put down your weapons",
+    "answer": "武器を捨てろ",
+    "sentence": "Put down your weapons.",
+    "sentence_jp": "武器を捨てろ."
+  },
+  {
+    "word": "determine sentencing",
+    "answer": "判決を言い渡す",
+    "sentence": "The judge will determine sentencing.",
+    "sentence_jp": "裁判官が判決を言い渡す。"
+  },
+  {
+    "word": "nephew",
+    "answer": "甥",
+    "sentence": "My nephew is five years old.",
+    "sentence_jp": "私の甥は5歳です。"
+  },
+  {
+    "word": "be beginning to get the idea that",
+    "answer": "だんだん〜な感じがしてきた",
+    "sentence": "I'm beginning to get the idea that you're avoiding me.",
+    "sentence_jp": "君が僕を避けてる感じがしてきた。"
+  },
+  {
+    "word": "what's going through your head",
+    "answer": "何を考えているの",
+    "sentence": "What's going through your head?",
+    "sentence_jp": "何を考えているの?"
+  },
+  {
+    "word": "We've been over this.",
+    "answer": "もうおわったことだ",
+    "sentence": "We've been over this.",
+    "sentence_jp": "もうおわったことだ"
+  },
+  {
+    "word": "probation",
+    "answer": "保護観察",
+    "sentence": "He's currently on probation.",
+    "sentence_jp": "彼はいま保護観察中だ。"
+  },
+  {
+    "word": "I'm inclined toward ~",
+    "answer": "~が良いと思い始めている",
+    "sentence": "I'm inclined toward taking the job.",
+    "sentence_jp": "その仕事を受けようかという気になっている。"
+  },
+  {
+    "word": "parole",
+    "answer": "仮釈放",
+    "sentence": "He was released on parole.",
+    "sentence_jp": "彼は仮釈放された。"
+  },
+  {
+    "word": "do my time",
+    "answer": "刑期をすごす",
+    "sentence": "I just want to do my time and get out.",
+    "sentence_jp": "刑期を終えて出所したいだけだ。"
+  },
+  {
+    "word": "Doesn't look like the type.",
+    "answer": "そういうタイプには見えない",
+    "sentence": "Doesn't look like the type.",
+    "sentence_jp": "そういうタイプには見えない"
+  },
+  {
+    "word": "looking back on it",
+    "answer": "今になって思い返すと",
+    "sentence": "Looking back on it, I should’ve said no.",
+    "sentence_jp": "今になって思うと断るべきだった。"
+  },
+  {
+    "word": "I was set up",
+    "answer": "罠に嵌められた",
+    "sentence": "I was set up.",
+    "sentence_jp": "俺は嵌められたんだ"
+  },
+  {
+    "word": "beat it",
+    "answer": "うせろ",
+    "sentence": "Beat it!",
+    "sentence_jp": "うせろ!"
+  },
+  {
+    "word": "wouldn't be too sure of that.",
+    "answer": "それはどうかな",
+    "sentence": "Wouldn't be too sure of that.",
+    "sentence_jp": "それはどうかな"
+  },
+  {
+    "word": "mull it over",
+    "answer": "よく考えろ",
+    "sentence": "Take your time and mull it over.",
+    "sentence_jp": "ゆっくり考えてみて。"
+  },
+  {
+    "word": "when you're ready to talk,",
+    "answer": "話す気になったら",
+    "sentence": "When you're ready to talk,",
+    "sentence_jp": "話す気になったら、"
+  },
+  {
+    "word": "It means absolutely zero",
+    "answer": "それは無意味",
+    "sentence": "It means absolutely zero.",
+    "sentence_jp": "無意味なことだ"
+  },
+    {
+    "word": "pull the trigger",
+    "answer": "行動を起こす",
+    "sentence": "It’s time to pull the trigger.",
+    "sentence_jp": "そろそろ行動するときだ。"
+  },
+  {
+    "word": "put this off",
+    "answer": "後回しにする",
+    "sentence": "Don't put this off any longer.",
+    "sentence_jp": "これ以上後回しにするな。"
+  },
+  {
+    "word": "go for it",
+    "answer": "挑戦する",
+    "sentence": "You should go for it!",
+    "sentence_jp": "やってみたらいいよ！"
+  },
+  {
+    "word": "sissy",
+    "answer": "女々しい",
+    "sentence": "Don’t be such a sissy.",
+    "sentence_jp": "女々しいこと言うな。"
+  },
+  {
+    "word": "give it time",
+    "answer": "焦らず待ちなよ",
+    "sentence": "Just give it time.",
+    "sentence_jp": "焦らず待ちなよ。"
+  },
+  {
+    "word": "conjugal",
+    "answer": "面会",
+    "sentence": "He requested a conjugal visit.",
+    "sentence_jp": "彼は面会を求めた。"
+  },
+  {
+    "word": "I can't help wondering what",
+    "answer": "~がなぜかわからない",
+    "sentence": "I can’t help wondering what went wrong.",
+    "sentence_jp": "何がいけなかったのか気になって仕方がない。"
+  },
+  {
+    "word": "sooner or later",
+    "answer": "いずれ",
+    "sentence": "Sooner or later, they’ll find out.",
+    "sentence_jp": "いずれ彼らは気づくよ。"
+  },
+  {
+    "word": "quite fond of ~",
+    "answer": "~が好き",
+    "sentence": "He’s quite fond of chocolate.",
+    "sentence_jp": "彼はチョコが大好きだ。"
+  },
+  {
+    "word": "any more",
+    "answer": "これ以上〜すると",
+    "sentence": "If you lie any more, I’m leaving.",
+    "sentence_jp": "これ以上ウソをついたら、私は出ていくよ。"
+  },
+  {
+    "word": "then we're through here",
+    "answer": "これで話は終わりだ",
+    "sentence": "Then we're through here.",
+    "sentence_jp": "これで話は終わりだ"
+  },
+  {
+    "word": "set a record",
+    "answer": "新記録を作る",
+    "sentence": "She set a new record today.",
+    "sentence_jp": "彼女は今日新記録を出した。"
+  },
+  {
+    "word": "we got nothing in common",
+    "answer": "ただの他人さ",
+    "sentence": "We got nothing in common.",
+    "sentence_jp": "ただの他人さ"
+  },
+  {
+    "word": "immaculate conception",
+    "answer": "間違った考え",
+    "sentence": "That idea is pure immaculate conception.",
+    "sentence_jp": "それはまったくの思い違いだ。"
+  },
+  {
+    "word": "desperation",
+    "answer": "自暴自棄",
+    "sentence": "He acted out of desperation.",
+    "sentence_jp": "彼は自暴自棄になって行動した。"
+  },
+  {
+    "word": "It's my understanding that",
+    "answer": "私の理解だと",
+    "sentence": "It’s my understanding that he left early.",
+    "sentence_jp": "私の理解だと彼は早く帰った。"
+  },
+  {
+    "word": "have a habit of answering a question with a question",
+    "answer": "質問に質問で答える",
+    "sentence": "You have a habit of answering a question with a question.",
+    "sentence_jp": "君は質問に質問で答えるクセがあるね。"
+  },
+  {
+    "word": "equivocate",
+    "answer": "ごまかす",
+    "sentence": "Stop equivocating and give me a straight answer.",
+    "sentence_jp": "ごまかさずにはっきり答えて。"
+  },
+  {
+    "word": "No matter who it is",
+    "answer": "相手が誰であろうと",
+    "sentence": "No matter who it is, I’ll treat them equally.",
+    "sentence_jp": "相手が誰であろうと、平等に接するよ。"
+  },
+  {
+    "word": "I wish it were true, but it's nowhere near it",
+    "answer": "本当ならよかったけど、全然そんなことない",
+    "sentence": "I wish it were true, but it's nowhere near it.",
+    "sentence_jp": "本当ならよかったけど、全然そんなことない"
+  },
+  {
+    "word": "tingling sensation",
+    "answer": "ちくちくする痛み",
+    "sentence": "I felt a tingling sensation in my arm.",
+    "sentence_jp": "腕にチクチクする感覚があった。"
+  },
+  {
+    "word": "are we in business?",
+    "answer": "頼めるか？",
+    "sentence": "Are we in business?",
+    "sentence_jp": "頼めるか？"
+  },
+  {
+    "word": "you got spine",
+    "answer": "根性あるな",
+    "sentence": "You got spine.",
+    "sentence_jp": "根性あるな"
+  }
+  
+]
+

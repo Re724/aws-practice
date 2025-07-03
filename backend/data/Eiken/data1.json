@@ -1,0 +1,38 @@
+[
+  {
+    "word": "silvergrass",
+    "answer": "ススキ",
+    "sentence": "The hills were covered in silvergrass.",
+    "sentence_jp": "丘はススキに覆われていた。"
+  },
+  {
+    "word": "biological properties",
+    "answer": "生物的特性",
+    "sentence": "We studied the biological properties of the plant.",
+    "sentence_jp": "その植物の生物的特性を調べた。"
+  },
+  {
+    "word": "resilient",
+    "answer": "打たれ強い",
+    "sentence": "She's very resilient under pressure.",
+    "sentence_jp": "彼女はプレッシャーに強い。"
+  },
+  {
+    "word": "to this end",
+    "answer": "そのために",
+    "sentence": "To this end, we need more funding.",
+    "sentence_jp": "そのためには、もっと資金が必要だ。"
+  },
+  {
+    "word": "namely",
+    "answer": "つまり、具体的に言うと",
+    "sentence": "Three people were late, namely John, Lisa, and Tom.",
+    "sentence_jp": "3人が遅刻した。つまりジョン、リサ、トムだ。"
+  },
+  {
+    "word": "proximity of other vehicles",
+    "answer": "車間距離",
+    "sentence": "The system alerts you to the proximity of other vehicles.",
+    "sentence_jp": "システムが他の車との車間距離を知らせてくれる。"
+  }
+]
