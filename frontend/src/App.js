@@ -10,7 +10,7 @@ const normalize = (str) =>
     .toLowerCase()
     .replace(/\.$/, '')
     .replace(/\s+/g, ' ')
-    .replace(/[’‘‛`´]/g, "'")
+    .replace(/[''‛`´]/g, "'")
     .replace(/she is/g, "she's")
     .replace(/he is/g, "he's")
     .replace(/they are/g, "they're")
@@ -64,7 +64,8 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [showHint, setShowHint] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-
+  const [showNotes, setShowNotes] = useState(false); // 新機能：ノート表示
+  const [learningType, setLearningType] = useState("all"); // 学習タイプ（all, word, phrase など）
 
 useEffect(() => {
   setLoading(true);
@@ -76,7 +77,13 @@ useEffect(() => {
       return res.json();
     })
     .then(data => {
-      const shuffled = shuffle(data).slice(0, questionCount);
+      // 学習タイプでフィルタリング
+      let filteredData = data;
+      if (learningType !== "all") {
+        filteredData = data.filter(item => item.type === learningType);
+      }
+      
+      const shuffled = shuffle(filteredData).slice(0, questionCount);
       setQuestions(shuffled);
       setCurrent(0);
       setSelected(null);
@@ -85,12 +92,13 @@ useEffect(() => {
       setShowChoices(false);
       setLoading(false);
       setInputValue("");
+      setShowNotes(false);
     })
     .catch(err => {
       console.error("Fetch失敗:", err);
       setLoading(false);
     });
-}, [category, dataset, questionCount, restartTrigger]);
+}, [category, dataset, questionCount, restartTrigger, learningType]);
 
   const question = questions[current];
 
@@ -123,6 +131,7 @@ useEffect(() => {
       setShowChoices(false);
       setInputValue("");
       setShowHint(false);
+      setShowNotes(false);
     }
   };
 
@@ -168,7 +177,14 @@ useEffect(() => {
             <h3>間違った単語一覧：</h3>
             <ul>
               {wrongWords.map((q, i) => (
-                <li key={i}>「{q.word}」→ {q.answer}</li>
+                <li key={i}>
+                  <strong>「{q.word}」</strong> → {q.answer}
+                  {q.notes && (
+                    <div style={{ fontSize: '0.8em', color: '#888', marginTop: '0.25rem' }}>
+                      💡 {q.notes}
+                    </div>
+                  )}
+                </li>
               ))}
             </ul>
             <button className="button" onClick={handleClearWrongWords}>間違えた単語をクリア</button>
@@ -187,7 +203,6 @@ useEffect(() => {
          className="button"
          onClick={() => setShowSettings(prev => !prev)}
          style={{ marginBottom: '1rem' }}
-         //className="toggle-settings-btn"
       >
         <span>⚙️</span>
       {showSettings ? "設定を隠す" : "設定を表示"}
@@ -211,6 +226,13 @@ useEffect(() => {
         <option value="sentence">例文入力モード</option>
       </select>
     </label>
+    <label>学習タイプ：
+      <select value={learningType} onChange={(e) => setLearningType(e.target.value)}>
+        <option value="all">混合モード</option>
+        <option value="word">単語のみ</option>
+        <option value="phrase">フレーズのみ</option>
+      </select>
+    </label>
     <br />
     <label>単語帳：
       <select value={dataset} onChange={(e) => setDataset(e.target.value)}>
@@ -230,11 +252,27 @@ useEffect(() => {
   </div>
     )}
 
-
       <p>スコア: {score} / {questions.length}</p>
+      
+      {/* 現在の学習タイプ表示 */}
+      {learningType !== "all" && (
+        <div style={{ 
+          backgroundColor: '#e8f4f8', 
+          padding: '0.5rem', 
+          borderRadius: '4px', 
+          marginBottom: '1rem',
+          fontSize: '0.9em',
+          color: '#2c5282',
+          textAlign: 'center'
+        }}>
+          📚 {learningType === "word" ? "単語学習モード" : "フレーズ学習モード"}
+        </div>
+      )}
 
       {question && (
         <>
+
+
           {mode === "multiple" ? (
             <>
               <div className="question" onClick={() => !showChoices && setShowChoices(true)}>
@@ -285,6 +323,37 @@ useEffect(() => {
               )}
             </>
           )}
+
+          {/* 補足情報（ノート）表示ボタン */}
+          {question.notes && (
+            <div style={{ marginTop: '1rem' }}>
+              <button 
+                className="button" 
+                onClick={() => setShowNotes(prev => !prev)}
+                style={{ 
+                  backgroundColor: '#e8f4f8',
+                  color: '#2c5282',
+                  fontSize: '0.9em'
+                }}
+              >
+                💡 {showNotes ? "補足情報を隠す" : "補足情報を見る"}
+              </button>
+              {showNotes && (
+                <div style={{ 
+                  backgroundColor: '#f7fafc', 
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '4px',
+                  padding: '1rem', 
+                  marginTop: '0.5rem',
+                  fontSize: '0.9em',
+                  color: '#4a5568'
+                }}>
+                  <strong>💡 補足情報:</strong><br />
+                  {question.notes}
+                </div>
+              )}
+            </div>
+          )}
         </>
       )}
 
@@ -303,8 +372,26 @@ useEffect(() => {
               <p style={{ color: 'red' }}>❌ 不正解（正解は: {question.sentence}）</p>
             )
           )}
+          
           <button className="button" onClick={handleNext}>次の問題へ</button>
-          <p>{question.sentence}({question.sentence_jp})</p>
+          
+          <div style={{ marginTop: '1rem', padding: '1rem', backgroundColor: '#f8f9fa', borderRadius: '4px' }}>
+            <p><strong>例文:</strong> {question.sentence}</p>
+            <p><strong>日本語:</strong> {question.sentence_jp}</p>
+            
+            {/* 結果画面でもノート表示 */}
+            {question.notes && (
+              <div style={{ 
+                marginTop: '0.5rem',
+                padding: '0.5rem',
+                backgroundColor: '#e8f4f8',
+                borderRadius: '4px',
+                fontSize: '0.9em'
+              }}>
+                <strong>💡 補足:</strong> {question.notes}
+              </div>
+            )}
+          </div>
         </div>
       )}
     </div>

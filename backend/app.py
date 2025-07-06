@@ -12,6 +12,7 @@ CORS(app)  # React (localhost:3000) からのアクセスを許可
 def get_words():
     category = request.args.get("category")
     dataset = request.args.get("dataset")
+    word_type = request.args.get("type")
 
     if not category or not dataset:
         return jsonify({"error": "Missing category or dataset"}), 400
@@ -26,12 +27,14 @@ def get_words():
         )
         cursor = connection.cursor(dictionary=True)
 
-        query = """
-            SELECT word, answer, sentence, sentence_jp
-            FROM WORD
-            WHERE category = %s AND dataset = %s
-        """
-        cursor.execute(query, (category, dataset))
+        query = "SELECT word, answer, sentence, sentence_jp, type FROM WORD WHERE category = %s AND dataset = %s"
+        params = [category, dataset]
+
+        if word_type:
+            query += " AND type = %s"
+            params.append(word_type)
+    
+        cursor.execute(query, params)
         rows = cursor.fetchall()
 
         cursor.close()

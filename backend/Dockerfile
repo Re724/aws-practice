@@ -11,4 +11,5 @@ COPY . .
 
 EXPOSE 5050
 
-CMD ["python", "app.py"]
+CMD sh -c "sleep 10 && python import_json_to_db.py && python app.py"
+
